@@ -1,4 +1,4 @@
-/**
+r/**
  * @author mrdoob / http://mrdoob.com/
  * @author Larry Battle / http://bateru.com/news
  * @author bhouston / http://exocortex.com
@@ -10089,8 +10089,8 @@ THREE.Loader.prototype = {
 		e.style.top = "0px";
 		e.style.fontSize = "0.8em";
 		e.style.textAlign = "left";
-		e.style.background = "rgba(0,0,0,0.25)";
-		e.style.color = "#fff";
+		e.style.background = "rgba(0,0,255,0)";
+		e.style.color = "#000066";
 		e.style.width = "120px";
 		e.style.padding = "0.5em 0.5em 0.5em 0.5em";
 		e.style.zIndex = 1000;
@@ -13580,7 +13580,7 @@ THREE.MeshPhongMaterial.prototype.clone = function () {
 	var material = new THREE.MeshPhongMaterial();
 
 	THREE.Material.prototype.clone.call( this, material );
-
+{ map: THREE.ImageUtils.loadTexture('images/crate.jpg') }
 	material.color.copy( this.color );
 	material.ambient.copy( this.ambient );
 	material.emissive.copy( this.emissive );
